@@ -91,7 +91,7 @@ function showEstimateForm(type) {
         <input type="number" class="form-control text-center" id="vehicleCount" value="1" min="1" max="10" style="width:60px;" readonly>
         <button type="button" class="btn btn-outline-primary px-2 py-1" id="incrementBtn">+</button>
       </div>
-      <button type="submit" class="btn btn-primary w-100" disabled id="getFareBtn">Get Fare Estimate</button>
+      <button type="submit" class="btn btn-primary w-100" disabled id="getFareBtn">Calculate Price</button>
     </form>
   `;
   // Back to options
@@ -128,7 +128,7 @@ function showEstimateForm(type) {
   // Prevent submit (demo)
   form.onsubmit = function(e) {
     e.preventDefault();
-    getFareBtn.textContent = `Estimated: ₹${2500 * vehicleCount.value}`;
+    getFareBtn.textContent = `Pay Now: ₹${2500 * vehicleCount.value}`;
     getFareBtn.disabled = true;
   };
 } 
