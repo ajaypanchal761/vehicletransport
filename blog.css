@@ -1,0 +1,39 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #F0F8FF;
+  color: #222;
+}
+
+section.bg-light {
+  background: #F5FFFA !important;
+}
+
+.card {
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  border: none;
+  background: #FFFFFF;
+  transition: box-shadow 0.2s;
+}
+.card:hover {
+  box-shadow: 0 4px 32px rgba(0,0,0,0.13);
+}
+
+.card-img-top {
+  border-radius: 1.2rem 1.2rem 0 0;
+  object-fit: cover;
+  height: 180px;
+  background: #E0FFFF;
+}
+
+.btn-outline-primary {
+  color: #0d6efd;
+  border: 2px solid #0d6efd;
+  background: transparent;
+  transition: background 0.3s, color 0.3s;
+}
+.btn-outline-primary:hover, .btn-outline-primary:focus {
+  background: #0d6efd;
+  color: #fff;
+  border-color: #0d6efd;
+} 

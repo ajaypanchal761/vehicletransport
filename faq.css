@@ -1,0 +1,27 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #F0F8FF;
+  color: #222;
+}
+
+section.bg-light {
+  background: #F5FFFA !important;
+}
+
+.accordion-item {
+  border-radius: 1.2rem !important;
+  margin-bottom: 1rem;
+  border: none;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  background: #FFFFFF;
+}
+.accordion-button {
+  border-radius: 1.2rem !important;
+  background: #E0FFFF;
+  color: #0d6efd;
+  font-weight: 500;
+}
+.accordion-button:not(.collapsed) {
+  background: #FDF5E6;
+  color: #222;
+} 

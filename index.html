@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Transport | Home</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- Navbar Include -->
+  <div id="navbar-include"></div>
+
+  <!-- Hero Section -->
+  <section class="hero-section d-flex align-items-center justify-content-center text-center" style="min-height: 70vh; background: url('bglogo.png') center/cover no-repeat;">
+    <div class="container">
+      <h1 class="display-4 fw-bold text-white mb-3">Premium Vehicle Transport Across Cities</h1>
+      <p class="lead text-white-50 mb-4">Safe, Reliable & Fast Car and Bike Relocation</p>
+      <a href="#estimate" class="btn btn-primary btn-lg shadow" id="openEstimateBtn">Get an Estimate</a>
+      <!-- Estimate Cards -->
+      <div class="row justify-content-center mt-4" id="estimateCards">
+        <div class="col-6 col-md-3 mb-3">
+          <div class="card text-center p-3 estimate-card h-100" data-type="truck" style="cursor:pointer;">
+            <img src="carlogo.png" alt="" class="mx-auto mb-2" width="80" height="80" loading="lazy">
+            <h6 class="fw-bold mb-0">Car</h6>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 mb-3">
+          <div class="card text-center p-3 estimate-card h-100" data-type="bike" style="cursor:pointer;">
+            <img src="bikelogo.png" alt="" class="mx-auto mb-2" width="80" height="80" loading="lazy">
+            <h6 class="fw-bold mb-0">Two Wheeler</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Estimate Modal -->
+  <div class="modal fade" id="estimateModal" tabindex="-1" aria-labelledby="estimateModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="row g-0">
+          <!-- Left Info Panel -->
+          <div class="col-md-5 bg-light p-5 d-flex flex-column justify-content-center align-items-start">
+            <h2 class="fw-bold mb-3" id="estimateModalTitle">Get an Estimate</h2>
+            <p class="mb-0" id="estimateModalDesc">Please fill in the details, so that we can provide you with our best service</p>
+          </div>
+          <!-- Right Content Panel -->
+          <div class="col-md-7 p-5">
+            <div id="estimateOptions">
+              <div class="list-group mb-3">
+                <button class="list-group-item list-group-item-action d-flex align-items-center estimate-option" data-type="truck">
+                  <img src="carlogo.png" alt="Truck" width="48" height="48" class="me-3"> Car <span class="ms-auto"><i class="fa fa-chevron-down"></i></span>
+                </button>
+                <button class="list-group-item list-group-item-action d-flex align-items-center estimate-option" data-type="bike">
+                  <img src="bikelogo.png" alt="Two Wheeler" width="48" height="48" class="me-3"> Two Wheeler <span class="ms-auto"><i class="fa fa-chevron-down"></i></span>
+                </button>
+              </div>
+            </div>
+            <div id="estimateFormContainer" class="d-none">
+              <!-- Dynamic form will be injected here by JS -->
+            </div>
+            <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Placeholder for other sections -->
+  <div class="container my-5">
+    <!-- We Serve These Locations -->
+    <section class="mb-5" id="locations">
+      <h2 class="text-center mb-4"><b>We Serve These Locations</h2>
+      <div class="row justify-content-center">
+        <!-- Delhi Card -->
+        <div class="col-12 col-sm-6 col-md-3 mb-4">
+          <div class="card h-100 shadow rounded-4 border-0 text-center p-3">
+            <img src="delhi.jpg" alt="Delhi" class="card-img-top rounded-4 mb-3" style="height:180px;object-fit:cover;">
+            <div class="card-body p-0">
+              <h4 class="fw-bold text-primary mb-2">Delhi</h4>
+              <p class="mb-0 text-secondary" style="min-height:48px;">India Gate, Red Fort, Connaught Place</p>
+            </div>
+          </div>
+        </div>
+        <!-- Gurgaon Card -->
+        <div class="col-12 col-sm-6 col-md-3 mb-4">
+          <div class="card h-100 shadow rounded-4 border-0 text-center p-3">
+            <img src="gurgaon.jpg" alt="Gurgaon" class="card-img-top rounded-4 mb-3" style="height:180px;object-fit:cover;">
+            <div class="card-body p-0">
+              <h4 class="fw-bold text-primary mb-2">Gurgaon</h4>
+              <p class="mb-0 text-secondary" style="min-height:48px;">CyberHub, MG Road, DLF Phase</p>
+            </div>
+          </div>
+        </div>
+        <!-- Jaipur Card -->
+        <div class="col-12 col-sm-6 col-md-3 mb-4">
+          <div class="card h-100 shadow rounded-4 border-0 text-center p-3">
+            <img src="jaipur.jpg" alt="Jaipur" class="card-img-top rounded-4 mb-3" style="height:180px;object-fit:cover;">
+            <div class="card-body p-0">
+              <h4 class="fw-bold text-primary mb-2">Jaipur</h4>
+              <p class="mb-0 text-secondary" style="min-height:48px;">Hawa Mahal, Amer Fort, Pink City</p>
+            </div>
+          </div>
+        </div>
+        <!-- Mumbai Card -->
+        <div class="col-12 col-sm-6 col-md-3 mb-4">
+          <div class="card h-100 shadow rounded-4 border-0 text-center p-3">
+            <img src="mumbai.jpg" alt="Mumbai" class="card-img-top rounded-4 mb-3" style="height:180px;object-fit:cover;">
+            <div class="card-body p-0">
+              <h4 class="fw-bold text-primary mb-2">Mumbai</h4>
+              <p class="mb-0 text-secondary" style="min-height:48px;">Gateway of India, Bandra, Juhu</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="mb-5" id="why-choose-us">
+      <h2 class="text-center mb-4">Why Choose Us</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-3">
+          <div class="card h-100 text-center p-3">
+            <i class="fa fa-shield-alt fa-2x mb-2 text-primary"></i>
+            <h5 class="fw-bold">Safe & Secure</h5>
+            <p>We ensure your vehicle is transported with utmost safety and care.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card h-100 text-center p-3">
+            <i class="fa fa-clock fa-2x mb-2 text-primary"></i>
+            <h5 class="fw-bold">On-Time Delivery</h5>
+            <p>We value your time and guarantee timely delivery of your vehicle.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card h-100 text-center p-3">
+            <i class="fa fa-thumbs-up fa-2x mb-2 text-primary"></i>
+            <h5 class="fw-bold">Trusted Service</h5>
+            <p>Thousands of happy customers trust us for their vehicle transport needs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="mb-5" id="reviews">
+      <h2 class="text-center mb-4">Customer Reviews</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-3">
+          <div class="card h-100 p-3">
+            <div class="d-flex align-items-center mb-2">
+              <i class="fa fa-user-circle fa-2x me-2"></i>
+              <span class="fw-bold">Amit Sharma</span>
+            </div>
+            <p>"Excellent service! My car was delivered on time and in perfect condition."</p>
+            <div>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star-half-alt text-warning"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card h-100 p-3">
+            <div class="d-flex align-items-center mb-2">
+              <i class="fa fa-user-circle fa-2x me-2"></i>
+              <span class="fw-bold">Priya Verma</span>
+            </div>
+            <p>"Very professional and reliable. Highly recommended for bike transport."</p>
+            <div>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card h-100 p-3">
+            <div class="d-flex align-items-center mb-2">
+              <i class="fa fa-user-circle fa-2x me-2"></i>
+              <span class="fw-bold">Rahul Singh</span>
+            </div>
+            <p>"Affordable rates and great customer support. Will use again!"</p>
+            <div>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+              <i class="fa fa-star text-warning"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer Include -->
+  <div id="footer-include"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
